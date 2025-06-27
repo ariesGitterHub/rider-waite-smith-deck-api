@@ -9,19 +9,9 @@
 
 const cards = require("../../data/tarotDeck");
 
-// exports.handler = async (event, context) => {
-//   return {
-//     statusCode: 200,
-//     body: JSON.stringify(cards)
-//   };
-// };
-
-exports.handler = async function () {
-  const cards = [
-    /* your tarot cards */
-  ];
+exports.handler = async (event, context) => {
   return {
     statusCode: 200,
-    body: JSON.stringify({ cards }),
+    body: JSON.stringify({ cards }), // 👈 wrap in object
   };
 };
